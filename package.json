@@ -14,7 +14,8 @@
     "framer-motion": "^10.16.4",
     "lucide-react": "^0.284.0",
     "clsx": "^2.0.0",
-    "tailwind-merge": "^1.14.0"
+    "tailwind-merge": "^1.14.0",
+    "@radix-ui/react-slot": "^1.0.2"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.0.3",
