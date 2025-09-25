@@ -2,7 +2,7 @@ import React from "react";
 import { Button } from "@/components/ui/button.jsx";
 import { Card, CardContent } from "@/components/ui/card.jsx";
 import { motion } from "framer-motion";
-import { Flag, Mail, Instagram } from "lucide-react";
+import { HeartPulse, Flag, Users, Megaphone, Instagram } from "lucide-react";
 
 export default function VASSTRACKHome() {
   return (
@@ -23,39 +23,136 @@ export default function VASSTRACKHome() {
         </div>
       </header>
 
-
-      {/* Main Content */}
-      <main className="flex-grow flex items-center justify-center">
-        <motion.div initial={{opacity:0, y:12}} animate={{opacity:1, y:0}} transition={{duration:0.6}}>
-          <Card className="bg-white/5 border-white/10 w-full max-w-md">
-            <CardContent className="p-8 text-center">
-              <h1 className="text-3xl font-bold tracking-tight text-lime-400">Get in Touch</h1>
-              <p className="mt-2 text-white/70">We're here to connect. Reach out with any questions or to learn more about our mission.</p>
-              <div className="mt-6 space-y-4">
-                <a href="mailto:info@vasstrack.org" className="block w-full">
-                  <Button size="lg" className="w-full bg-lime-500 text-black hover:bg-lime-400">
-                    <Mail className="mr-2 h-5 w-5"/> Email Us
-                  </Button>
-                </a>
-                <a href="https://instagram.com/vasstrackfitness" target="_blank" rel="noreferrer" className="block w-full">
-                  <Button size="lg" variant="outline" className="w-full border-white/30 text-white hover:bg-white/10">
-                    <Instagram className="mr-2 h-5 w-5"/> Follow on Instagram
-                  </Button>
-                </a>
+      {/* Hero */}
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(163,230,53,0.25),transparent_40%),radial-gradient(circle_at_80%_10%,rgba(34,197,94,0.2),transparent_35%)]" />
+        <div className="max-w-7xl mx-auto px-4 py-20 grid md:grid-cols-2 gap-10 items-center">
+          <motion.div initial={{opacity:0, y:12}} animate={{opacity:1, y:0}} transition={{duration:0.6}}>
+            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight">
+              Step by Step, Raising Awareness for <span className="text-lime-400">Veterans’ Mental Health</span>
+            </h1>
+            <p className="mt-5 text-white/80 max-w-xl">
+              VASSTRACK is a nonprofit uniting veterans, families, and the community through inclusive Walk‑a‑Thons and 3K runs that spark conversation, connection, and support.
+            </p>
+            <div className="mt-6 flex flex-wrap gap-3" />
+          </motion.div>
+          <motion.div initial={{opacity:0, scale:0.96}} animate={{opacity:1, scale:1}} transition={{duration:0.6, delay:0.1}}>
+            {/* Photo placeholder panel */}
+            <div className="relative aspect-[4/3] rounded-2xl bg-white/5 border border-white/10 overflow-hidden shadow-xl">
+              <div className="absolute inset-0 grid place-items-center">
+                <p className="text-white/60 text-sm">Hero Image Placeholder (Use a strong VASSTRACK photo from @vasstrackfitness)</p>
               </div>
-            </CardContent>
-          </Card>
-        </motion.div>
-      </main>
+              <div className="absolute bottom-0 left-0 right-0 p-4 bg-black/50 backdrop-blur">
+                <p className="text-xs text-white/70">We’ll replace this with an IG photo once we connect content.</p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* About */}
+      <section id="about" className="py-16 border-t border-white/10">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid md:grid-cols-3 gap-6">
+            <Card className="bg-white/5 border-white/10">
+              <CardContent className="p-6">
+                <HeartPulse className="h-6 w-6 text-lime-400"/>
+                <h3 className="mt-3 font-semibold text-lg">Mission</h3>
+                <p className="text-white/70 mt-2">Bring awareness to mental health challenges faced by veterans and families through inclusive, movement‑based community events.</p>
+              </CardContent>
+            </Card>
+            <Card className="bg-white/5 border-white/10">
+              <CardContent className="p-6">
+                <Users className="h-6 w-6 text-lime-400"/>
+                <h3 className="mt-3 font-semibold text-lg">What We Do</h3>
+                <ul className="text-white/70 mt-2 list-disc list-inside space-y-1">
+                  <li>Host Walk‑a‑Thons & 3K Runs</li>
+                  <li>Promote awareness & advocacy</li>
+                  <li>Connect veterans & families to resources</li>
+                </ul>
+              </CardContent>
+            </Card>
+            <Card className="bg-white/5 border-white/10">
+              <CardContent className="p-6">
+                <Megaphone className="h-6 w-6 text-lime-400"/>
+                <h3 className="mt-3 font-semibold text-lg">Vision</h3>
+                <p className="text-white/70 mt-2">A resilient community where veterans thrive mentally, emotionally, and physically—together.</p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Events CTA */}
+      <section id="events" className="py-16">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-6 items-center">
+            <div>
+              <h2 className="text-3xl font-bold">Flagship Event: UTC Mall, Sarasota</h2>
+              <p className="text-white/80 mt-3">We’re coordinating dates with mall management for an indoor community Walk‑a‑Thon. Subscribe and be first to know when registration opens.</p>
+              <div className="mt-5 flex gap-3" />
+            </div>
+            <div className="rounded-2xl bg-white/5 border border-white/10 p-6">
+              <h3 className="font-semibold">Event Quick Facts</h3>
+              <ul className="mt-3 text-white/70 space-y-1 list-disc list-inside">
+                <li>Inclusive, all fitness levels</li>
+                <li>Resource & sponsor tables</li>
+                <li>Target: 100–250 participants</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Sponsorship */}
+      <section id="sponsor" className="py-16 bg-white/5 border-y border-white/10">
+        <div className="max-w-7xl mx-auto px-4">
+          <h2 className="text-3xl font-bold">Sponsorship Opportunities</h2>
+          <p className="text-white/80 mt-2 max-w-2xl">Partner with VASSTRACK to champion veterans’ mental health. Tiered packages available for businesses and community partners.</p>
+          <div className="mt-6 grid md:grid-cols-3 gap-4">
+            {[
+              { tier: "Presenting", price: "$2,500", perks: ["Logo on all marketing", "Start/Finish banner", "5 registrations", "Sponsor table"]},
+              { tier: "Gold", price: "$1,000", perks: ["Logo on tee & flyer", "3 registrations", "Vendor table"]},
+              { tier: "Silver", price: "$500", perks: ["Logo on flyer & social", "2 registrations"]},
+            ].map((s, i) => (
+              <Card key={i} className="bg-black/60 border-white/10">
+                <CardContent className="p-6">
+                  <p className="text-lime-400 font-semibold">{s.tier} — {s.price}</p>
+                  <ul className="mt-3 text-white/70 space-y-1 list-disc list-inside">
+                    {s.perks.map((p, idx) => (<li key={idx}>{p}</li>))}
+                  </ul>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+          <div className="mt-6" />
+        </div>
+      </section>
+
+      {/* Instagram Gallery */}
+      <section id="gallery" className="py-16">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="flex items-center justify-between">
+            <h2 className="text-3xl font-bold">From Instagram</h2>
+            <p className="text-lime-400 flex items-center gap-2"><Instagram className="w-4 h-4"/> @vasstrackfitness</p>
+          </div>
+          <p className="text-white/70 mt-2">We’ll embed your latest posts here. For now, these are placeholders.</p>
+          <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-3">
+            {Array.from({length:8}).map((_,i)=> (
+              <div key={i} className="aspect-square rounded-xl bg-white/5 border border-white/10 grid place-items-center text-white/50 text-xs">IG Photo {i+1}</div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Footer */}
       <footer className="py-8 border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 text-center text-sm text-white/60 space-y-2">
             <p>© {new Date().getFullYear()} VASSTRACK. All rights reserved.</p>
             <div className="flex justify-center items-center gap-4">
-              <a className="text-lime-400 hover:underline" href="mailto:info@vasstrack.org">info@vasstrack.org</a>
+              <p className="text-lime-400">info@vasstrack.org</p>
               <span>·</span>
-              <a className="text-lime-400 hover:underline" href="https://instagram.com/vasstrackfitness" target="_blank" rel="noreferrer">@vasstrackfitness</a>
+              <p className="text-lime-400">@vasstrackfitness</p>
             </div>
         </div>
       </footer>
