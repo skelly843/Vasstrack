@@ -1,8 +1,8 @@
 import React from "react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button.jsx";
+import { Card, CardContent } from "@/components/ui/card.jsx";
 import { motion } from "framer-motion";
-import { HeartPulse, Flag, Users, Megaphone, Mail, Instagram, Calendar } from "lucide-react";
+import { Flag, Mail, Instagram } from "lucide-react";
 
 export default function VASSTRACKHome() {
   return (
